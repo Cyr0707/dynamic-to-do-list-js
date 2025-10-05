@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return; // Stop execution if input is empty
         }
 
-        // Task Creation and Removal Logic
+        // --- Task Creation and Removal Logic ---
+        
         // Create the new list item (li)
         const listItem = document.createElement('li');
         listItem.textContent = taskText;
@@ -32,7 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create the remove button
         const removeButton = document.createElement('button');
         removeButton.textContent = "Remove";
-        removeButton.className = 'remove-btn';
+        
+        // 🌟 Updated: Using classList.add() for setting the class name
+        removeButton.classList.add('remove-btn'); 
 
         // Assign the onclick event to the remove button
         removeButton.onclick = function() {
